@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTU | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            z-index: 1000;
+        }
+
+        header h2 {
+            color: var(--text-light);
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #000;
+        }
+        section {
+            min-height: 100vh;
+            padding-top: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        section h4 {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .social a {
+            font-size: 1.5rem;
+        }
+
+        .social a:hover {
+            color: #000;
+            transform: scale(1.2);
+        }
+        main img{
+            width: 150px;
+            height: 150px;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>BTU</h2>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="home">
+    <h1>Hi,This is Bhuvaneshwaran T U</h1>
+    <h4>Frontend Developer • Data Enthusiast</h4>
+    <div class="social">
+        <a href="https://github.com/bhuvaneshtu10" target="_blank" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/bhuvaneshwaran-tu" target="_blank" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+    </div>
+    <img src="img.png">
+</section>
+
+</body>
+</html>

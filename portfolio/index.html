@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTU | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #00008b; 
+            --secondary: #00ffff; 
+            --text-light: #ffffff;
+            --accent: #e74c3c;
+            --bg-body: #f4f4f4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--bg-body);
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header h2 { color: var(--text-light); letter-spacing: 2px; }
+
+        nav { display: flex; gap: 1.5rem; }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: var(--accent); }
+
+        section {
+            min-height: 100vh;
+            padding: 120px 10% 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            position: relative;
+        }
+
+        #home { flex-direction: row; justify-content: space-around; text-align: left; }
+
+        .home-content { max-width: 600px; }
+
+        .profile-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        #about { background-color: #fff; }
+
+        #about ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            list-style: none;
+            width: 100%;
+        }
+
+        #about li {
+            background: #f9f9f9;
+            padding: 30px 20px;
+            border-radius: 12px;
+            border-bottom: 4px solid var(--secondary);
+            transition: 0.3s;
+        }
+
+        #about li:hover { transform: translateY(-10px); }
+
+        #about li i { font-size: 2rem; color: var(--primary); margin-bottom: 15px; display: block; }
+
+        #skills ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            width: 100%;
+            list-style: none;
+        }
+
+        #skills li { text-align: left; }
+
+        #skills label {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        #skills label::after { content: attr(data-percent); color: var(--primary); }
+
+        progress {
+            width: 100%;
+            height: 10px;
+            appearance: none;
+            border: none;
+        }
+
+        progress::-webkit-progress-bar { background-color: #ddd; border-radius: 10px; }
+        progress::-webkit-progress-value { 
+            background: linear-gradient(to right, var(--primary), var(--secondary)); 
+            border-radius: 10px; 
+        }
+
+        #Certifications article {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+        }
+
+        #Certifications img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        #Certifications img:hover { transform: scale(1.03); }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 40px 10%;
+            text-align: center;
+        }
+
+        footer nav {
+            justify-content: center;
+            margin-top: 20px;
+            gap: 2rem;
+        }
+
+        footer nav a {
+            font-size: 1.8rem;
+            transition: 0.3s;
+        }
+
+        footer nav a:hover { color: var(--secondary); transform: scale(1.2); }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>BTU</h2>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#Certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <section id="home">
+        <div class="home-content">
+            <h1>Hi, This is Bhuvaneshwaran TU</h1>
+            <h4>Frontend Developer • Data Enthusiast</h4>
+            <div class="social">
+                <a href="https://github.com/bhuvaneshtu10" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/bhuvaneshwaran-tu" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <img src="img.png" alt="Profile Picture" class="profile-img">
+    </section>
+
+    <section id="about">
+        <h1>About Me</h1>
+        <p>I am a <strong>CSE Sophomore</strong> and <strong>Frontend Developer</strong> focused on clean code and exploring <strong>Data Engineering & Cloud.</strong></p>
+        <br>
+        <ul>
+            <li><i class="fa-solid fa-user-tie"></i><strong>Leadership</strong><small>Campus Representative at OSCG’26</small></li>
+            <li><i class="fa-solid fa-code-merge"></i><strong>Open Source</strong><small>Contributor at SWOC</small></li>
+            <li><i class="fa-solid fa-microchip"></i><strong>Engineering</strong><small>CSE Sophomore student</small></li>
+            <li><i class="fa-solid fa-server"></i><strong>Cloud & Data</strong><small>Aspiring Data Engineer</small></li>
+        </ul>
+    </section>
+
+    <section id="skills">
+        <h1>My Skills</h1>
+        <ul>
+            <li><label data-percent="90%">HTML5</label><progress value="90" max="100"></progress></li>
+            <li><label data-percent="85%">CSS3</label><progress value="85" max="100"></progress></li>
+            <li><label data-percent="80%">JavaScript</label><progress value="80" max="100"></progress></li>
+            <li><label data-percent="75%">React</label><progress value="75" max="100"></progress></li>
+            <li><label data-percent="70%">Python</label><progress value="70" max="100"></progress></li>
+            <li><label data-percent="85%">SQL</label><progress value="85" max="100"></progress></li>
+            <li><label data-percent="90%">Git & Github</label><progress value="90" max="100"></progress></li>
+        </ul>
+    </section>
+
+    <section id="Certifications">
+        <h1>Certificates</h1>
+        <article>
+            <img src="ibmz.jpg" alt="IBM Z">
+            <img src="networking.png" alt="Networking">
+            <img src="sql.jpg" alt="SQL">
+            <img src="uiux.png" alt="UI/UX">
+        </article>
+    </section>
+
+    <section id="contact">
+        <h1>Contact Me</h1>
+        <p>Interested in collaborating? Shoot me an email!</p>
+        <br>
+        <a href="mailto:bhuvaneshwarantu1004@gmail.com" style="color: var(--primary); font-weight: bold; text-decoration: none; font-size: 1.5rem;">
+           bhuvaneshwarantu1004@gmail.com
+        </a>
+    </section>
+</main>
+
+<footer>
+    <h4>Connect with me</h4>
+    <nav>
+        <a href="https://instagram.com/your_username" target="_blank" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://github.com/bhuvaneshtu10" target="_blank" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/bhuvaneshwaran-tu" target="_blank" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+    </nav>
+    </footer>
+
+</body>
+</html>
