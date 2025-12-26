@@ -10,10 +10,4 @@ Portfolio
 
 https://roadmap.sh/projects/portfolio-website
 
-```
-roadmap.projects/
-├── portfolio/
-│   ├── index.html  
-│   ├── style.css
-│   └── img.png
-```
+https://btu-portfolio-sample.netlify.app/
